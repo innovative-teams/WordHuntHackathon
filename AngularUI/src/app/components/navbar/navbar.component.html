@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div class="navone">
     <ul class="nav justify-content-end">
       <li
@@ -22,4 +22,109 @@
       </li>
     </ul>
   </div>
-</div>
+</div> -->
+<nav
+  class="navbar navbar-expand-lg navbar-dark container"
+  style="background-color: rgba(0, 0, 0, 0) !important"
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" routerLink="/">Ana Sayfa</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarScroll"
+      aria-controls="navbarScroll"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarScroll">
+      <ul
+        class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+        style="--bs-scroll-height: 30vh"
+      >
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" routerLink="translate"
+            >Çeviri Aracı</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/new-word">Yeni Kelime Öğren</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a
+            class="nav-link dropdown-toggle"
+            id="navbarScrollingDropdown"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            Kendini Dene
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+            <li>
+              <a class="dropdown-item" routerLink="/find-typo"
+                >Yazım Hatasını Bul</a
+              >
+            </li>
+            <li><hr class="dropdown-divider" /></li>
+            <li><a class="dropdown-item" routerLink="/quiz">Sınava Gir</a></li>
+          </ul>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <ul
+          class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
+          style="--bs-scroll-height: 30vh"
+        >
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarScrollingDropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Hesap
+            </a>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarScrollingDropdown"
+              *ngIf="isAuthenticated != null && isAuthenticated"
+            >
+              <li>
+                <a class="dropdown-item" routerLink="/auth/update-profile">
+                  Profil
+                </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="/auth/logout">Çıkış Yap</a>
+              </li>
+            </ul>
+            <ul
+              class="dropdown-menu"
+              aria-labelledby="navbarScrollingDropdown"
+              *ngIf="isAuthenticated != null && !isAuthenticated"
+            >
+              <li>
+                <a class="dropdown-item" routerLink="/auth/login">
+                  Giriş Yap
+                </a>
+              </li>
+              <li><hr class="dropdown-divider" /></li>
+              <li>
+                <a class="dropdown-item" routerLink="/auth/register"
+                  >Kayıt Ol</a
+                >
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </form>
+    </div>
+  </div>
+</nav>

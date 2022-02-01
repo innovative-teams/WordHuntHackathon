@@ -21,6 +21,7 @@
     "@auth0/angular-jwt": "^5.0.2",
     "bootstrap": "^5.0.0-beta3",
     "font-awesome": "^4.7.0",
+    "jquery": "^3.6.0",
     "ngx-cookie": "^5.0.2",
     "ngx-toastr": "^14.0.0",
     "rxjs": "~6.6.0",

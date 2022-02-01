@@ -44,9 +44,8 @@ export class RegisterPageComponent implements OnInit {
           response.data.refreshToken.refreshTokenValue
         );
         this.tokenService.setToken(response.data.token);
-        this.router.navigate(['/']).then(() => {
-          this.toastrService.info(response.message);
-        });
+
+        window.location.href = '/';
       },
       (responseError) => {
         this.validationService.showErrors(responseError);

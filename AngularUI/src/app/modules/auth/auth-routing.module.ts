@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { LogoutComponent } from 'src/app/components/logout/logout.component';
 import { LoginDisableGuard } from 'src/app/guards/login-disable.guard';
 import { LoginGuard } from 'src/app/guards/login.guard';
 import { AuthPageComponent } from 'src/app/pages/auth/auth-page/auth-page.component';
@@ -19,8 +20,13 @@ const routes: Routes = [
     canActivate: [LoginDisableGuard],
   },
   {
-    path: 'update',
+    path: 'update-profile',
     component: AuthPageComponent,
+    canActivate: [LoginGuard],
+  },
+  {
+    path: 'logout',
+    component: LogoutComponent,
     canActivate: [LoginGuard],
   },
 ];

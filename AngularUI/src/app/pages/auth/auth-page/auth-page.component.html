@@ -1,3 +1,5 @@
+<app-skore-board></app-skore-board>
+
 <div class="container" *ngIf="userUpdateForm != null">
   <div class="formdegistir" style="margin-top: 15vh; color: white">
     <div class="row">
@@ -29,7 +31,7 @@
             <input type="email" class="form-control" formControlName="email" />
           </div>
           <div class="mb-3">
-            <label class="form-label">Eski Şifre</label>
+            <label class="form-label">Şifre</label>
             <input
               type="password"
               class="form-control"
@@ -37,7 +39,7 @@
             />
           </div>
           <div class="mb-3">
-            <label class="form-label">Yeni Şifre</label>
+            <label class="form-label">Yeni Şifre (Opsiyonel)</label>
             <input
               type="password"
               class="form-control"
@@ -49,7 +51,7 @@
             style="margin-top: 5vh"
           >
             <button
-              class="btn btn-warning me-md-2"
+              class="btn btn-dark me-md-2"
               type="button"
               (click)="update()"
             >
