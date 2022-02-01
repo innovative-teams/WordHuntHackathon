@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row" style="margin-top: 15vh" *ngIf="isAuthenticated != null">
+    <div class="col-md-5">
+      <img src="/assets/abuzer.png" width="330px" height="auto" alt="Abuzer" />
+    </div>
+    <div class="col" style="color: white">
+      <h1>SELAM BEN <b>ABUZER</b></h1>
+      <br />
+      <p style="font-size: 25px">
+        Bu diyarları fethetmeye geldim ama İngilizce bilmiyorum. Öğrenmeme
+        yardım edersen beni çok mutlu edersin. Ben İngilizce öğrenirken sen de
+        kendini geliştirip puan kazanabilirsin.
+      </p>
+    </div>
+    <div
+      class="row"
+      *ngIf="!isAuthenticated"
+      style="margin-top: 5vh; margin-bottom: 5vh"
+    >
+      <button class="col btn btn-dark" routerLink="/auth/login">
+        Giriş Yap
+      </button>
+      <div class="col"></div>
+      <button class="col btn btn-dark" routerLink="/auth/register">
+        Kayıt Ol
+      </button>
+    </div>
+  </div>
+
+  <app-leader-bord></app-leader-bord>
+</div>
+<div style="margin-bottom: 20vh"></div>
+
+<app-footer></app-footer>

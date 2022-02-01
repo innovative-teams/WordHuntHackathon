@@ -1,0 +1,53 @@
+<div class="container">
+  <div style="justify-content: center; align-items: center; text-align: center">
+    <img src="/assets/abuzer.png" alt="Abuzer" />
+    <h2 style="color: white">Merhaba Yine Ben</h2>
+    <h3 style="color: white">
+      Aşağıya istediğin kelimelerin çevirilerine bakman için bir araç bıraktım.
+    </h3>
+  </div>
+  <form [formGroup]="wordForm" style="margin-top: 10vh">
+    <div class="row">
+      <div class="col">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="apple"
+          formControlName="word"
+        />
+      </div>
+
+      <div class="col">
+        <select class="form-select" formControlName="targetCode">
+          <option value="tr">Türkçe</option>
+          <option value="en">English</option>
+        </select>
+      </div>
+
+      <div class="col">
+        <button
+          (click)="translate()"
+          class="w-100 btn btn-lg btn-dark"
+          type="submit"
+        >
+          Çevir
+        </button>
+      </div>
+    </div>
+  </form>
+
+  <div class="row" *ngIf="isSuccess && word != null" style="margin-top: 2vh">
+    <div
+      class="alert text-center"
+      style="
+        color: white;
+        border: 1px solid green;
+        border-radius: 50px;
+        margin-top: 5vh;
+      "
+      role="alert"
+    >
+      <b style="color: rgb(43, 206, 43)">{{ word }}</b>
+    </div>
+  </div>
+</div>

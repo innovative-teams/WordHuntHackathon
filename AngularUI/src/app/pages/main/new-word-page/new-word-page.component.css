@@ -1,0 +1,11 @@
+.btn {
+  background-image: linear-gradient(to right, purple, red);
+  border-radius: 50px;
+  border: none;
+  height: 5vh;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, red, purple);
+  border: none;
+}

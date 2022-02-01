@@ -1,0 +1,64 @@
+<div class="container" *ngIf="userUpdateForm != null">
+  <div class="formdegistir" style="margin-top: 15vh; color: white">
+    <div class="row">
+      <div class="col"></div>
+      <div class="col-md-6">
+        <form [formGroup]="userUpdateForm">
+          <div class="mb-3">
+            <label class="form-label">Ad</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="firstName"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Soyad</label>
+            <input
+              type="text"
+              class="form-control"
+              formControlName="lastName"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Yaş</label>
+            <input type="number" class="form-control" formControlName="age" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Email address</label>
+            <input type="email" class="form-control" formControlName="email" />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Eski Şifre</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="password"
+            />
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Yeni Şifre</label>
+            <input
+              type="password"
+              class="form-control"
+              formControlName="newPassword"
+            />
+          </div>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-end"
+            style="margin-top: 5vh"
+          >
+            <button
+              class="btn btn-warning me-md-2"
+              type="button"
+              (click)="update()"
+            >
+              Güncelle
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="col"></div>
+    </div>
+  </div>
+</div>

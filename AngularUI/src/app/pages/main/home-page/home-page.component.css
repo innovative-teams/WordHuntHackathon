@@ -1,0 +1,46 @@
+.btn {
+  background-image: linear-gradient(to right, purple, red);
+  border-radius: 150px;
+  border: none;
+  height: 7vh;
+  font-size: large;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, red, purple);
+  border: none;
+  font-size: x-large;
+  opacity: 0.8;
+}
+
+.home-container {
+  background-image: linear-gradient(to right, purple, red);
+  border-radius: 10px;
+  border: none;
+  height: 7vh;
+  font-size: large;
+  transition: 0.3s;
+  width: 200px !important;
+  height: 200px !important;
+  color: white;
+  margin: 1vh;
+}
+
+@media screen and (max-width: 1000px) {
+  .btn {
+    background-image: linear-gradient(to right, purple, red);
+    border-radius: 150px;
+    border: none;
+    height: 7vh;
+    font-size: smaller;
+    transition: 0.3s;
+  }
+
+  .btn:hover {
+    background-image: linear-gradient(to right, red, purple);
+    border: none;
+    font-size: smaller;
+    opacity: 0.8;
+  }
+}

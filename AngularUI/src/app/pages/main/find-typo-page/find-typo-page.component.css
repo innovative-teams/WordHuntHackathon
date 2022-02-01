@@ -1,0 +1,47 @@
+.button {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.btn {
+  background-image: linear-gradient(to right, purple, red);
+  border-radius: 20px;
+  border: none;
+  height: 5vh;
+}
+
+.form-control {
+  text-align: center;
+  border-radius: 20px;
+  border: transparent;
+  height: 7vh;
+  font-size: xx-large;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, red, purple);
+  border: none;
+}
+
+@media screen and (max-width: 600px) {
+  .btn {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 10px;
+    font-size: smaller;
+  }
+
+  .form-control {
+    text-align: center;
+    border-radius: 20px;
+    border: none;
+    height: 5vh;
+    font-size: large;
+  }
+
+  .btn:hover {
+    background-image: linear-gradient(to right, red, purple);
+    border: none;
+    font-size: smaller;
+  }
+}

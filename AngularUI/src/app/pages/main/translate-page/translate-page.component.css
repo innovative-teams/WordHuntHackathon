@@ -1,0 +1,32 @@
+.button {
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+}
+
+.btn {
+  background-image: linear-gradient(to right, purple, red);
+  border-radius: 150px;
+  border: none;
+  height: 7vh;
+}
+
+.form-control {
+  text-align: center;
+  border-radius: 150px;
+  border: transparent;
+  height: 7vh;
+  font-size: x-large;
+}
+
+.form-select {
+  text-align: center;
+  border-radius: 150px;
+  border: transparent;
+  height: 7vh;
+  font-size: large;
+}
+
+.btn:hover {
+  background-image: linear-gradient(to right, red, purple);
+  border: none;
+}

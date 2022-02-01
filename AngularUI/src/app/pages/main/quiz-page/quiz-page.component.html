@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="row" *ngIf="isFinished != null && !isFinished">
+    <div class="body" *ngIf="wordForExamDto != null">
+      <div class="quiz-container" id="quiz">
+        <div class="quiz-header">
+          <h2 id="question">{{ wordForExamDto.word }}</h2>
+          <form>
+            <label class="container-c">
+              {{ wordForExamDto.option1 }}
+              <input
+                type="radio"
+                name="radio"
+                value="{{ wordForExamDto.option1 }}"
+                [(ngModel)]="data"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container-c">
+              {{ wordForExamDto.option2 }}
+              <input
+                type="radio"
+                name="radio"
+                value="{{ wordForExamDto.option2 }}"
+                [(ngModel)]="data"
+              />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container-c">
+              {{ wordForExamDto.option3 }}
+              <input
+                type="radio"
+                name="radio"
+                value="{{ wordForExamDto.option3 }}"
+                [(ngModel)]="data"
+              />
+              <span class="checkmark"></span>
+            </label>
+          </form>
+        </div>
+
+        <button
+          (click)="checkWordTranslate()"
+          class="btn btn-dark"
+          style="border-radius: 10px"
+          [disabled]="isAnswered"
+        >
+          Gönder
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    class="row"
+    style="justify-content: center"
+    *ngIf="isFinished != null && !isFinished"
+  >
+    <button
+      (click)="getWordFromPool(); isNext = true; data = ''"
+      class="btn btn-dark button"
+      style="width: 20vh"
+    >
+      Next
+    </button>
+
+    <div class="row" style="margin-top: 10vh">
+      <div class="col-md-3"></div>
+      <div class="col">
+        <div
+          class="alert text-center"
+          [style]="changeStyleAlert()"
+          role="alert"
+        >
+          <b [style]="changeTextStyleAlert()">{{ alertText }}</b>
+        </div>
+      </div>
+
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+
+  <div class="row" *ngIf="isFinished" style="margin-top: 25vh">
+    <div
+      class="alert text-center"
+      style="
+        color: white;
+        border: 1px solid green;
+        border-radius: 50px;
+        margin-top: 5vh;
+      "
+      role="alert"
+    >
+      <b style="color: rgb(43, 206, 43)">{{ finishText }}</b>
+    </div>
+  </div>
+</div>

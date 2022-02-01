@@ -1,0 +1,83 @@
+<div class="container" *ngIf="wordModel != null">
+  <div style="justify-content: center; align-items: center; text-align: center">
+    <img src="/assets/abuzer.png" alt="Abuzer" />
+    <h2 style="color: white">Merhaba Yine Ben</h2>
+    <h3 style="color: white">
+      Aşağıda bazı kelimelerin yazımlarını karıştırdım
+    </h3>
+  </div>
+  <div class="row">
+    <div style="margin-top: 1vh; text-align: center">
+      <h1 style="color: white; opacity: 0.8">
+        Benim için Kelimenin Doğrusunu Yazar Mısın ?
+      </h1>
+
+      <h2 style="margin-top: 5vh; color: white">
+        <span style="border: 1px solid; border-radius: 20px"
+          ><span style="padding: 5vh">{{ wordModel.searchedWord }}</span></span
+        >
+      </h2>
+      <div class="row">
+        <div
+          style="margin-top: 1vh; margin-bottom: 1vh"
+          [formGroup]="findTypoForm"
+        >
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Doğrusunu Yaz"
+            formControlName="newWord"
+          />
+        </div>
+        <div class="row" style="align-items: center">
+          <div class="d-grid gap-2 col-3 mx-auto">
+            <button
+              class="btn btn-dark button"
+              (click)="verifyWord()"
+              [disabled]="isAnswered"
+            >
+              GÖNDER
+            </button>
+          </div>
+        </div>
+        <div class="row">
+          <div class="d-grid gap-2 col-2 mx-auto">
+            <button
+              (click)="getWordWithTypo(); isNext = true"
+              class="btn btn-dark button"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col">
+          <div class="alert" [style]="changeStyleAlert()">
+            <b [style]="changeTextStyleAlert()">{{ alertMessage }}</b>
+          </div>
+        </div>
+
+        <div class="col-md-3"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row" *ngIf="isFinished" style="margin-top: 25vh">
+    <div
+      class="alert text-center"
+      style="
+        color: white;
+        border: 1px solid red;
+        border-radius: 50px;
+        margin-top: 5vh;
+      "
+      role="alert"
+    >
+      <b style="color: #e82b09">{{ finishText }}</b>
+    </div>
+  </div>
+</div>

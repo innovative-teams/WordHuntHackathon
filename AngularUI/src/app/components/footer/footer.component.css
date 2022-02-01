@@ -1,0 +1,37 @@
+.footer {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.social-icons {
+  margin-top: 20px;
+  margin-bottom: 5px;
+  align-items: center;
+  text-align: center;
+}
+
+.fa-linkedin {
+  font-size: 35px !important;
+}
+.fa-github {
+  font-size: 35px !important;
+}
+.fab {
+  cursor: pointer !important;
+  transition: 0.5s !important;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+a :hover {
+  color: rgba(51, 51, 51, 0.5);
+}
+.hover :hover {
+  color: white !important;
+  opacity: 1 !important;
+}
+.hover {
+  color: white !important;
+  opacity: 0.5 !important;
+}
