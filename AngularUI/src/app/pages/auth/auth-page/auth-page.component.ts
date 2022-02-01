@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { StudentModel } from 'src/app/models/student/studentModel';
 import { AuthService } from 'src/app/services/auth.service';
+import { SeoService } from 'src/app/services/seo.service';
 import { StudentService } from 'src/app/services/student.service';
 import { TokenService } from 'src/app/services/token.service';
 import { ValidationService } from 'src/app/services/validation.service';
@@ -22,11 +23,14 @@ export class AuthPageComponent implements OnInit {
     private studentService: StudentService,
     private validationService: ValidationService,
     private authService: AuthService,
-    private toastrService: ToastrService
+    private toastrService: ToastrService,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
     this.getDefaultUser();
+    this.seoService.updateTitle('Profil');
+    this.seoService.updateMeta('description', 'Profil sayfası');
   }
 
   createUserUpdateForm() {

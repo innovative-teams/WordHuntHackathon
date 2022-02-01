@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from 'src/app/services/auth.service';
+import { SeoService } from 'src/app/services/seo.service';
 import { TokenService } from 'src/app/services/token.service';
 import { ValidationService } from 'src/app/services/validation.service';
 
@@ -19,11 +20,14 @@ export class RegisterPageComponent implements OnInit {
     private tokenService: TokenService,
     private validationService: ValidationService,
     private toastrService: ToastrService,
-    private router: Router
+    private router: Router,
+    private seoService: SeoService
   ) {}
 
   ngOnInit(): void {
     this.createRegisterForm();
+    this.seoService.updateTitle('Kayıt Ol');
+    this.seoService.updateMeta('description', 'Kayıt Ol Sayfası');
   }
 
   createRegisterForm() {
