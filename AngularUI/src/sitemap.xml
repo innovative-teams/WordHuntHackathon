@@ -1,7 +1,47 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <head/>
     <url>
-        <loc>/</loc>
+        <loc>https://wordhunthackathon.netlify.app/</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/translate</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/new-word</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/find-typo</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/quiz</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/auth/login</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/auth/register</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/auth/logout</loc>
+        <lastmod>2022-02-01</lastmod>
+    </url>
+
+    <url>
+        <loc>https://wordhunthackathon.netlify.app/auth/update-profile</loc>
         <lastmod>2022-02-01</lastmod>
     </url>
 </urlset>
